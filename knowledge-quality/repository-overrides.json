@@ -1,0 +1,30 @@
+{
+  "schema": "knowledge-quality/repository-overrides/v1",
+  "overrides": [
+    {
+      "category": "scan-root",
+      "value": "doc",
+      "reason": "This repository's documentation tree (note: 'doc', not 'docs'), holding FSI reference architectures and governance material. The primary surface for the naming, neutrality, and public-output audit."
+    },
+    {
+      "category": "scan-root",
+      "value": "usecases",
+      "reason": "CDK sample applications (core banking, customer channel, analytics platform, and others) with README prose and inline comments carrying service names; in scope for the naming rule."
+    },
+    {
+      "category": "scan-root",
+      "value": "resources",
+      "reason": "Shared CDK constructs and CloudFormation templates whose descriptions and comments carry service names; in scope for the naming rule."
+    },
+    {
+      "category": "exclusion",
+      "value": ".private",
+      "reason": "Gitignored (if present). Holds review provenance and any support-case references that must never reach public output; excluded from the public-facing audit surface by design."
+    },
+    {
+      "category": "localization-tier",
+      "value": "japanese-primary-monolingual",
+      "reason": "This repository is Japanese-primary and, unlike the Hub, does not maintain an English translation tree (only README.md and doc/ in Japanese). This value records its actual single-language shape as its own configuration; no cross-language parity is asserted, and no Hub rule text is copied."
+    }
+  ]
+}
